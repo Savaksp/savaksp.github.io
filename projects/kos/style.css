@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+@keyframes smoothscroll1 {
+    from, to { scroll-behavior: smooth; }
+}
+  
+@keyframes smoothscroll2 {
+    from, to { scroll-behavior: smooth; }
+}
+  
+html {
+    background-color: #fbfbfb;
+    animation: smoothscroll1 1s;
+}
+  
+html:focus-within {
+    animation-name: smoothscroll2;
+    scroll-behavior: smooth;
+}
+
+.header-class {
+    border-bottom: 1px solid #ccc;
+    padding: .5em 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-class h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, #f945ce 0%, #673770 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-size: 1.75em;
+    margin: .5em 0;
+    display: inline-block;
+}
+
+header .navi ul,
+header .navi li {
+    margin: 0;
+    padding: 0;
+}
+
+header .navi li {
+    font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+    color: #F9DBBB;
+    margin: 1em 1em 1em 1em;
+}
+
+header .navi a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration-line: none;
+    color: #fff;
+    transition: 0.5s;
+    color: #424242;
+}
+
+header .navi a:link:hover {
+    color: #f945ce;
+}
+
+article:not(:nth-of-type(1)) {
+    border-top: 0.1em solid #ccc;
+}
+
+#info p {
+    color: #323232;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+@keyframes changeColors {
+    0%{background-position:0% 0%;}
+    25%{background-position:25% 25%;}
+    50%{background-position:50% 50%;}
+    75%{background-position:75% 75%;}
+    100%{background-position:100% 100%;}
+}
+
+#info .addbot {
+    font-size: 1.25em;
+    text-decoration-line: none;
+    color: #E11299;
+    background-size: 800% 800%;
+    background-image: repeating-linear-gradient(to left, #E11299, #9A208C, #E11299);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: changeColors 1s ease infinite;
+}
+
+@keyframes rainbow {
+    0%{background-position:0% 0%}
+    25%{background-position:50% 25%;}
+    50%{background-position:0% 50%;}
+    75%{background-position:75% 25%;}
+    100%{background-position:100%, 100%;}
+}
+
+#info span {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #f945ce;
+    background-size: 800% 800%;
+    background-image: repeating-linear-gradient(to left, red, violet, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    animation: rainbow 8s ease infinite;
+}
+
+.articleName {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #E11299;
+}
+
+#commands ul h1 {
+    font-family: 'Roboto Mono', monospace;
+    color: violet;
+    display: block;
+}
+
+#commands li {
+    content: '';
+    display: block;
+    border: .25em solid #323232;
+    border-radius: 1.5em;
+    margin-bottom: 1em;
+    margin-left: -2.5em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+#commands li p {
+    color: #E11299;
+}
+
+#commands li b,
+#commands li p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+    background-color: #323232;
+}
+
+.footer-class {
+    margin-top: 5vh;
+    padding-top: .001em;
+    padding-bottom: .001em;
+    background: #181823;
+}
+
+footer .footer-class h1 {
+    color: #ccc;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+}
+
+footer ul {
+    text-align: center;
+    content: '';
+}
+
+footer ul li {
+    content: '';
+    display: block;
+}
+
+footer .navi ul,
+footer .navi li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    display: block;
+    color: #F9DBBB;
+    margin: 1.25em 1em 1em 1em;
+}
+
+footer .navi li a {
+    text-decoration-line: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+footer .navi li a:link:hover {
+    color: #f945ce;
+}
