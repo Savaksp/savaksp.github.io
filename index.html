@@ -1,108 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
     <head>
-        <meta charset="UTF-8">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend&display=swap');
+
+body {
+    background-color: #424242;
+}
+
+header {
+    color: white;
+    text-align: center;
+    font-family: 'Archivo black', sans-serif;
+}
+
+#main {
+    height: 100vh;
+}
+
+#main .title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#main .cards {
+    display: inline-flex;
+}
+
+#main .card {
+    margin: 0 0 1em 10px;
+    width: 50%;
+    height: 100%;
+    border: 3px solid paleturquoise;
+}
+
+#main .card:first-child {
+    margin-left: 0;
+}
+
+#main .card-title {
+    color: white;
+    padding-left: 5%;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+}
+
+#main .card-title a {
+    color: white;
+    transition: 0.35s color;
+}
+
+#main .card-title a:hover {
+    color: tomato;
+}
+
+#main .card .description {
+    border: 3px solid #fff;
+    margin: 3px 3px 3px 3px;
+    padding: 0 3px 0 3px;
+    color: wheat;
+    font-weight: 400;
+    font-family: 'Lexend', sans-serif;
+}
+
+#main .card .description p {
+    margin: 6px 0 6px 0;
+}
+
+@media screen and (max-width: 450px) {
+    #main .card:first-child {
+        margin-left: 0.5em;
+        width: 100.5%;
+    }
+
+    #main .cards {
+        margin: 0 0 0 -1em;
+        width: 101.5%;
+        display: block;
+    }
+
+    #main .card {
+        width: 100%;
+    }
+    
+    #main .card-title {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+footer {
+    background-color: #323232;
+    padding: 0 0 0.75% 0;
+}
+
+footer h1 {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    margin: 2.5%;
+    color: white;
+}
+
+footer ul li {
+    display: block;
+    text-align: center;
+}
+
+footer ul li a {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+    color: thistle;
+    transition: 0.75s color;
+}
+
+footer ul li a:hover {
+    color: tomato;
+}
+</style>
+
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Savaksp</title>
-        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <header>
-        <div class="header-class">
-            <div class="name"><h1>xffc.</h1></div>
-            <div class="navi">
-                <nav>
-                    <ul>
-                        <li><a href="#apis">APIs</a></li>
-                        <li><a href="#modules">Modules</a></li>
-                        <li><a href="#discord">Discord</a></li>
-                        <li><a href="#telegram">Telegram</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
     <body>
-        <article id="apis">
-            <div class="splitter">
-                <h1>APIs I used</h1>
-                <ul>
-                    <li>
-                        <a href="https://otakugifs.xyz/">OtakuGIFs</a>
-                        <p>OtakuGIFs aims to delivers high quality anime GIFs, WebPs & AVIFs as reactions, perfect for chat apps.</p>
-                    </li>
-                    <li>
-                        <a href="https://github.com/yt-dlp/yt-dlp">YT-DLP</a>
-                        <p>yt-dlp is a youtube-dl fork based on the now inactive youtube-dlc. The main focus of this project is adding new features and patches while also keeping up to date with the original project</p>
-                    </li>
-                </ul>
-            </div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header>
+            <h1>Savaksp</h1>
+        </header>
+
+        <article id="main">
+            <h1 class="title">My projects</h1>
+
+            <section class="cards">
+                <div class="card">
+                    <h1 class="card-title">Zerotier-setup script</h1>
+                    <div class="description">
+                        <p>This script automatically setting up zerotier and connecting to network</p>
+                        <p><button onclick="copy('0')">Copy setup line</button></p>
+                        <p style="color: gray">(wget required; tested on debian/ubuntu)</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1 class="card-title"><a href="https://github.com/xffc/sfserver">Simple File Server</a></h1>
+                    <div class="description">
+                        <p>Using this server, you can send files from one device to another (not backwards)</p>
+                        <p style="color: gray">(only windows)</p>
+                    </div>
+                </div>
+            </section>
         </article>
 
-        <article id="modules">
-            <div class="splitter">
-                <h1>My modules</h1>
-                <ul>
-                    <li>
-                        <a href="https://npmjs.com/package/easy_jdb">Easy JDB</a>
-                        <p>Simple NodeJS module for your databases in JSON-format.</p>
-                    </li>
-                    <li>
-                        <a href="https://google.com">???</a>
-                        <p><b>🚧 UNDER CONSTRUCTION 🚧</b></p>
-                    </li>
-                </ul>
-            </div>
-        </article>
-
-        <article id="discord">
-            <div class="splitter">
-                <h1>My discord projects</h1>
-                <ul>
-                    <li>
-                        <a href="projects/kos/index.html">Kos bot</a>
-                        <p>Multifunctional bot for discord, written in Java. (JDA)</p>
-                    </li>
-                    <li>
-                        <a href="projects/simple_eco.html">Simple Eco Bot</a>
-                        <p>An economic bot written in NodeJS for your server. (Small functionality. Update coming soon. Library: discord.js)</p>
-                    </li>
-                    <li>
-                        <a href="projects/music.html">Simple Music Bot</a>
-                        <p>Open source music bot written in Python for your server. (Small functionality. Library: disnake)</p>
-                    </li>
-                    <li>
-                        <a href="https://google.com">???</a>
-                        <p><b>🚧 UNDER CONSTRUCTION 🚧</b></p>
-                    </li>
-                </ul>
-            </div>
-        </article>
-
-        <article id="telegram">
-            <div class="splitter">
-                <h1>My telegram projects</h1>
-                <ul>
-                    <li>
-                        <a href="https://google.com">???</a>
-                        <p><b>🚧 UNDER CONSTRUCTION 🚧</b></p>
-                    </li>
-                </ul>
-            </div>
-        </article>
+        <footer>
+            <h1>Contact</h1>
+            <ul>
+                <li><a href="https://github.com/xffc">Github (xffc)</a></li>
+                <li><a href="https://github.com/savaksp">Github (savaksp)</a></li>
+                <li><a href="https://t.me/Sava_SKk">Telegram</a></li>
+            </ul>
+        </footer>
     </body>
-    <footer id="contact">
-        <div class="footer-class">
-            <div class="name"><h1>xffc.</h1></div>
-            <div class="navi">
-                <ul>
-                    <li><a href="https://discord.gg/djCe2vhkV7">Discord</a></li>
-                    <li><a href="https://github.com/Savaksp">Github</a></li>
-                    <li><a href="https://t.me/Sava_SKk">Telegram</a></li>
-                    <li><a href="https://npmjs.com/~savaksp">npmjs</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+
+    <script>
+        function copy(a) {
+            const COPY = {
+                "0": "wget https://raw.githubusercontent.com/Savaksp/savaksp.github.io/main/setup_zerotier.sh && chmod +x setup_zerotier.sh && ./setup_zerotier.sh && rm -rf setup_zerotier.sh"
+            }
+
+            navigator.clipboard.writeText(COPY[a]);
+        }
+    </script>
 </html>
