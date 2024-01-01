@@ -1,4 +1,4 @@
-echo Install curl? (y/n)
+echo Install curl? Y/n
 read prompt
 if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 then
@@ -6,7 +6,7 @@ then
 fi
 clear
 
-echo Install zerotier? (y/n)
+echo Install zerotier? Y/n
 read prompt
 if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 then
